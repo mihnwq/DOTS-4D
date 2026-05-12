@@ -42,13 +42,18 @@ public class Object3Dto4DAuthoring : MonoBehaviour
             });
 
             var vertexBuffer = AddBuffer<OriginalVertex4D>(entity);
-            Vector3[] vertices = authoring.sourceMesh.vertices;
-            foreach (Vector3 v in vertices)
+
+            
+            if (authoring.sourceMesh != null)
             {
-                vertexBuffer.Add(new OriginalVertex4D { value = new float4(v.x, v.y, v.z, 0f) });
+                Vector3[] vertices = authoring.sourceMesh.vertices;
+                foreach (Vector3 v in vertices)
+                {
+                    vertexBuffer.Add(new OriginalVertex4D { value = new float4(v.x, v.y, v.z, 0f) });
+                }
             }
 
-           
+
             AddComponentObject(entity, new Mesh4DReference
             {
                 originalMesh = authoring.sourceMesh,

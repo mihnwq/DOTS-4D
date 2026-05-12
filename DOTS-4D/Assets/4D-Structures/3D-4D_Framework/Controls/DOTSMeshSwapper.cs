@@ -22,6 +22,7 @@ public class DOTSMeshSwapper : MonoBehaviour
     void Start()
     {
         em = World.DefaultGameObjectInjectionWorld.EntityManager;
+        SwapMesh(null);
     }
 
     void Update()
@@ -46,12 +47,17 @@ public class DOTSMeshSwapper : MonoBehaviour
         {
             DynamicBuffer<OriginalVertex4D> vertexBuffer = em.GetBuffer<OriginalVertex4D>(entity);
 
+            
             vertexBuffer.Clear();
 
-            Vector3[] newVertices = newMesh.vertices;
-            foreach (Vector3 v in newVertices)
+            
+            if (newMesh != null)
             {
-                vertexBuffer.Add(new OriginalVertex4D { value = new float4(v.x, v.y, v.z, 0f) });
+                Vector3[] newVertices = newMesh.vertices;
+                foreach (Vector3 v in newVertices)
+                {
+                    vertexBuffer.Add(new OriginalVertex4D { value = new float4(v.x, v.y, v.z, 0f) });
+                }
             }
 
             Mesh4DReference meshRef = em.GetComponentData<Mesh4DReference>(entity);
@@ -61,6 +67,7 @@ public class DOTSMeshSwapper : MonoBehaviour
                 Destroy(meshRef.workingMesh);
             }
 
+          
             meshRef.originalMesh = newMesh;
             meshRef.workingMesh = null;
 
@@ -72,6 +79,10 @@ public class DOTSMeshSwapper : MonoBehaviour
 
         entities.Dispose();
 
-        lastMesh = newMesh;
+       
+         lastMesh = newMesh; 
     }
+
+
+
 }

@@ -144,7 +144,7 @@ Transform:
   m_GameObject: {fileID: 928483452}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -21.01868, y: 24.8615, z: -243.5558}
+  m_LocalPosition: {x: -10.7, y: 17.2, z: -243.5558}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -196,7 +196,7 @@ Transform:
   m_GameObject: {fileID: 1648860447}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -21.01868, y: 24.8615, z: -243.5558}
+  m_LocalPosition: {x: 22.2, y: -25.9, z: -243.5558}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -232,13 +232,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Object3Dto4DAuthoring
   sourceMesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
-  meshMaterial: {fileID: 2100000, guid: 5082e856b94866c44877d80b4d515c49, type: 2}
-  rotationSpeed: 7.18
-  wDistance: 2.62
-  wOffset: 0.27
-  wOscillationAmplitude: 1.72
-  wOscillationSpeed: 4.7
-  wDeformStrength: 2.23
+  meshMaterial: {fileID: 2100000, guid: 21628ed27bb015b40995d0d2a26f1e2a, type: 2}
+  rotationSpeed: 11.68
+  wDistance: 2.97
+  wOffset: 0
+  wOscillationAmplitude: 0.8
+  wOscillationSpeed: 2.15
+  wDeformStrength: 2.86
 --- !u!4 &1711882365
 Transform:
   m_ObjectHideFlags: 0

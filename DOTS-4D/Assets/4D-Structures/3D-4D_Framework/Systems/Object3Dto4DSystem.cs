@@ -89,12 +89,26 @@ public partial class Object3Dto4DSystem : SystemBase
      
         foreach (var (data, obj4D, meshRef, buffer, transform) in SystemAPI.Query<RefRO<Object3Dto4DData>, RefRO<Object4DData>, Mesh4DReference, DynamicBuffer<OriginalVertex4D>, RefRO<LocalToWorld>>())
         {
-            
+
+            if (meshRef.originalMesh == null || meshRef.material == null)
+                continue;
+
             if (meshRef.workingMesh == null)
             {
-                meshRef.workingMesh = UnityEngine.Object.Instantiate(meshRef.originalMesh);
-                meshRef.workingMesh.MarkDynamic();
+                 meshRef.workingMesh = UnityEngine.Object.Instantiate(meshRef.originalMesh);
+                 meshRef.workingMesh.MarkDynamic();
+
+               // break;
             }
+
+
+            if (buffer.Length == 0 || buffer.Length != meshRef.workingMesh.vertexCount)
+                continue;
+
+          
+            if (transform.ValueRO.Value.c3.w == 0)
+                continue;
+         
 
             int vertexCount = buffer.Length;
             NativeArray<Vector3> tempProjectedVertices = new NativeArray<Vector3>(vertexCount, Allocator.TempJob);
