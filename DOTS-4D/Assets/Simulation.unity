@@ -119,6 +119,18 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!114 &465581166 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1949261869828042684, guid: 5d6e9ae31a184384dac2dc444b97c2e2,
+    type: 3}
+  m_PrefabInstance: {fileID: 1419415541}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2da0c512f12947e489f739169773d7ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &928483452
 GameObject:
   m_ObjectHideFlags: 0
@@ -184,6 +196,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a4db7a114972834c8e4117be1d82ba3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1224786745 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4226238187729675015, guid: 5d6e9ae31a184384dac2dc444b97c2e2,
+    type: 3}
+  m_PrefabInstance: {fileID: 1419415541}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2da0c512f12947e489f739169773d7ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1347039803
 GameObject:
   m_ObjectHideFlags: 0
@@ -200,6 +224,8 @@ GameObject:
   - component: {fileID: 1347039811}
   - component: {fileID: 1347039810}
   - component: {fileID: 1347039809}
+  - component: {fileID: 1347039812}
+  - component: {fileID: 1347039813}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -383,8 +409,37 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a61fb8e823383b8408cab96d322828db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RuntimeSpeedChanger
-  speedMultiplier: 0.5
+  speedMultiplier: 10
   rotationSpeed: {fileID: 1099247558}
+--- !u!114 &1347039812
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1347039803}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8408812a3f04009479b07664d68e35cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DOTSInputField
+  inputFields:
+  - {fileID: 465581166}
+  - {fileID: 1224786745}
+  - {fileID: 2047075967}
+  textObj: {fileID: 0}
+--- !u!114 &1347039813
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1347039803}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af70fd0a496236d4a91dff83848775bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SceneSwitcher
 --- !u!1001 &1419415541
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -400,8 +455,33 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1730511843386270207, guid: 5d6e9ae31a184384dac2dc444b97c2e2,
         type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1730511843386270207, guid: 5d6e9ae31a184384dac2dc444b97c2e2,
+        type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1730511843386270207, guid: 5d6e9ae31a184384dac2dc444b97c2e2,
+        type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1949261869828042684, guid: 5d6e9ae31a184384dac2dc444b97c2e2,
+        type: 3}
+      propertyPath: m_OnEndEdit.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1347039812}
+    - target: {fileID: 1949261869828042684, guid: 5d6e9ae31a184384dac2dc444b97c2e2,
+        type: 3}
+      propertyPath: m_OnEndEdit.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetDeformStrength
+      objectReference: {fileID: 0}
+    - target: {fileID: 1949261869828042684, guid: 5d6e9ae31a184384dac2dc444b97c2e2,
+        type: 3}
+      propertyPath: m_OnEndEdit.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: DOTSInputField, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 2144679540336009899, guid: 5d6e9ae31a184384dac2dc444b97c2e2,
         type: 3}
@@ -452,6 +532,71 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4226238187729675015, guid: 5d6e9ae31a184384dac2dc444b97c2e2,
+        type: 3}
+      propertyPath: m_OnEndEdit.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1347039812}
+    - target: {fileID: 4226238187729675015, guid: 5d6e9ae31a184384dac2dc444b97c2e2,
+        type: 3}
+      propertyPath: m_OnEndEdit.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetOscillationAmplitude
+      objectReference: {fileID: 0}
+    - target: {fileID: 4226238187729675015, guid: 5d6e9ae31a184384dac2dc444b97c2e2,
+        type: 3}
+      propertyPath: m_OnEndEdit.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: DOTSInputField, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 5465860864310594602, guid: 5d6e9ae31a184384dac2dc444b97c2e2,
+        type: 3}
+      propertyPath: m_Value
+      value: 0.149
+      objectReference: {fileID: 0}
+    - target: {fileID: 5465860864310594602, guid: 5d6e9ae31a184384dac2dc444b97c2e2,
+        type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1347039811}
+    - target: {fileID: 5465860864310594602, guid: 5d6e9ae31a184384dac2dc444b97c2e2,
+        type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnScroll
+      objectReference: {fileID: 0}
+    - target: {fileID: 5465860864310594602, guid: 5d6e9ae31a184384dac2dc444b97c2e2,
+        type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: RuntimeSpeedChanger, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 8031287306456762616, guid: 5d6e9ae31a184384dac2dc444b97c2e2,
+        type: 3}
+      propertyPath: m_OnEndEdit.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1347039812}
+    - target: {fileID: 8031287306456762616, guid: 5d6e9ae31a184384dac2dc444b97c2e2,
+        type: 3}
+      propertyPath: m_OnEndEdit.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetOscillationSpeed
+      objectReference: {fileID: 0}
+    - target: {fileID: 8031287306456762616, guid: 5d6e9ae31a184384dac2dc444b97c2e2,
+        type: 3}
+      propertyPath: m_OnEndEdit.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: DOTSInputField, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 8175031775535206481, guid: 5d6e9ae31a184384dac2dc444b97c2e2,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1347039813}
+    - target: {fileID: 8175031775535206481, guid: 5d6e9ae31a184384dac2dc444b97c2e2,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnClickMenu
+      objectReference: {fileID: 0}
+    - target: {fileID: 8175031775535206481, guid: 5d6e9ae31a184384dac2dc444b97c2e2,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: SceneSwitcher, Assembly-CSharp
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -612,6 +757,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!114 &2047075967 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8031287306456762616, guid: 5d6e9ae31a184384dac2dc444b97c2e2,
+    type: 3}
+  m_PrefabInstance: {fileID: 1419415541}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2da0c512f12947e489f739169773d7ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

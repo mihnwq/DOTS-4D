@@ -9,7 +9,7 @@ public class Object3Dto4DAuthoring : MonoBehaviour
     public Material meshMaterial;
 
     [Header("4D Parameters")]
-    public float rotationSpeed = 1f;
+    //public float rotationSpeed = 1f;
     public float wDistance = 3f;
     public float wOffset = 0f;
     public float wOscillationAmplitude = 0f;
@@ -25,11 +25,11 @@ public class Object3Dto4DAuthoring : MonoBehaviour
             var entity = GetEntity(TransformUsageFlags.Dynamic);
 
         
-            AddComponent(entity, new Object4DData
+          /*  AddComponent(entity, new Object4DData
             {
                 angle = 0f,
                 rotationSpeed = authoring.rotationSpeed
-            });
+            });*/
 
             
             AddComponent(entity, new Object3Dto4DData

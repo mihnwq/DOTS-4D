@@ -22,7 +22,7 @@ public class RuntimeSpeedChanger : MonoBehaviour
 
         
 
-        OnScroll(0.1f);
+        OnScroll(0f);
     }
 
 
@@ -45,9 +45,34 @@ public class RuntimeSpeedChanger : MonoBehaviour
  
         entities.Dispose();
     }
+    /*
+     * if (em.HasComponent<HypercubeRawData>(entity))
+          {
+     */
 
+    private float GetMaximumSpeed()
+    {
+        EntityQuery query = em.CreateEntityQuery(typeof(Object4DData));
+        NativeArray<Entity> entities = query.ToEntityArray(Allocator.Temp);
 
-    public void OnScroll(float value)
+        foreach (Entity entity in entities)
+        {
+            if (em.HasComponent<Object3Dto4DData>(entity))
+            {
+                entities.Dispose();
+                return 10f;
+            }
+
+            
+
+        }
+
+        entities.Dispose();
+
+        return 1.5f;
+    }
+
+        public void OnScroll(float value)
     {
         float delta = value - lastValue;
       //  Debug.Log(value);
@@ -58,7 +83,9 @@ public class RuntimeSpeedChanger : MonoBehaviour
             speed += delta * speedMultiplier;
 
 
-            speed = Mathf.Clamp(speed, 0.0f, 1.5f);
+            speed = Mathf.Clamp(speed, 0.0f, GetMaximumSpeed());
+
+     
 
            
             ChangeSpeed(speed);

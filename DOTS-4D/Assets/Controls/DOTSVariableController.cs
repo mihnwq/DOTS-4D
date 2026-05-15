@@ -56,11 +56,25 @@ public class DOTSVariableController : MonoBehaviour
           {
                 HyperconeData coneData = em.GetComponentData<HyperconeData>(entity);
 
-                coneData.wSlices = Mathf.Clamp((int)value1 , 15 , 100);
-                coneData.coneSlope = Mathf.Clamp((int)value2 , 15 , 100);
-                coneData.wMax = Mathf.Clamp((int)value3 , 10, 100);
+                float slope = Mathf.Clamp(Mathf.Round(value2 / 100 * 3),0.8f,3);
 
-            em.SetComponentData(entity, coneData);
+                float wmax = Mathf.Clamp(Mathf.Round(value3 / 100 * 5),2,5);
+
+                coneData.wSlices = Mathf.Clamp((int)value1 , 2 , 200);
+
+                coneData.coneSlope = slope;
+
+                coneData.wMax = wmax;
+
+                /*  Debug.Log("Slices + " + Mathf.Clamp((int)value1, 15, 100)); 
+                  Debug.Log("Slope + " + Mathf.Clamp((int)value2, 15, 10));
+                  Debug.Log("WMax +" + Mathf.Clamp((int)value3, 10, 10));*/
+
+                Debug.Log(value1);
+                Debug.Log(value2);
+                Debug.Log(value3);
+
+                em.SetComponentData(entity, coneData);
           }else if(em.HasComponent<HypersphereData>(entity))
             {
                 HypersphereData sphereData = em.GetComponentData<HypersphereData>(entity);

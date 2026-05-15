@@ -155,5 +155,7 @@ public class PC_Selection : MonoBehaviour
         }
 
         Debug.Log("[PC_Selection] Model loaded successfully.");
+
+        DOTSMeshSwapper.instance.testMesh = MeshExtractor.GetMeshFromGameObject(meshFilter.gameObject);
     }
 }

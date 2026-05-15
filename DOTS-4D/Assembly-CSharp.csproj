@@ -83,6 +83,7 @@
     <Compile Include="Assets\4D-Structures\4D-Objects\Hypersphere\Systems\HypersphereSystem.cs" />
     <Compile Include="Assets\4D-Structures\3D-4D_Framework\Controls\MeshExtractor.cs" />
     <Compile Include="Assets\Testing\Shapes\ShapesData\Authoring\MoveAuthoring.cs" />
+    <Compile Include="Assets\Controls\SceneSwitcher.cs" />
     <Compile Include="Assets\StandaloneFileBrowser\StandaloneFileBrowser.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark02.cs" />
     <Compile Include="Assets\StandaloneFileBrowser\Sample\CanvasSampleSaveFileText.cs" />
@@ -122,6 +123,7 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextInfoDebugTool.cs" />
     <Compile Include="Assets\Controls\DOTSVariableController.cs" />
     <Compile Include="Assets\4D-Structures\3D-4D_Framework\Controls\PC_Selection.cs" />
+    <Compile Include="Assets\4D-Structures\3D-4D_Framework\Controls\DOTSInputField.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexShakeA.cs" />
     <Compile Include="Assets\DrawFunctions\UI_Draw\FourDNoiseBGController.cs" />
     <Compile Include="Assets\TextureLoader\BMPLoader.cs" />

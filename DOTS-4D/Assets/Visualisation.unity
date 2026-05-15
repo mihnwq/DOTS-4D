@@ -389,6 +389,7 @@ GameObject:
   - component: {fileID: 328418890}
   - component: {fileID: 328418891}
   - component: {fileID: 328418892}
+  - component: {fileID: 328418893}
   m_Layer: 0
   m_Name: MainCamera
   m_TagString: Untagged
@@ -593,10 +594,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1943a4446622ef3498255783c1d98478, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DOTSTextManager
-  name: {fileID: 1021957452}
+  name: {fileID: 1289158491}
   atribute1: {fileID: 1021957455}
   atribute2: {fileID: 1021957454}
   atribute3: {fileID: 1021957453}
+--- !u!114 &328418893
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 328418882}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af70fd0a496236d4a91dff83848775bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SceneSwitcher
 --- !u!1 &437904133
 GameObject:
   m_ObjectHideFlags: 0
@@ -911,6 +924,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: UI_Object_Handler_Visualisation
       objectReference: {fileID: 0}
+    - target: {fileID: 5280977520906467550, guid: d274e7146394f964ab049b70a6193aae,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 328418893}
+    - target: {fileID: 5280977520906467550, guid: d274e7146394f964ab049b70a6193aae,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnClickMenu
+      objectReference: {fileID: 0}
+    - target: {fileID: 5280977520906467550, guid: d274e7146394f964ab049b70a6193aae,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: SceneSwitcher, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 5397024657194239547, guid: d274e7146394f964ab049b70a6193aae,
         type: 3}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -940,6 +968,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 18.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 7109642542223166677, guid: d274e7146394f964ab049b70a6193aae,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 21.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7109642542223166677, guid: d274e7146394f964ab049b70a6193aae,
+        type: 3}
+      propertyPath: m_fontSizeBase
+      value: 21.2
       objectReference: {fileID: 0}
     - target: {fileID: 7342717316061888322, guid: d274e7146394f964ab049b70a6193aae,
         type: 3}
@@ -1037,18 +1075,6 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 1021957447}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1021957452 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8364540008257420030, guid: d274e7146394f964ab049b70a6193aae,
-    type: 3}
-  m_PrefabInstance: {fileID: 1021957447}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1021957453 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1371989253110816685, guid: d274e7146394f964ab049b70a6193aae,
@@ -1265,6 +1291,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1132849410}
   m_CullTransparentMesh: 1
+--- !u!114 &1289158491 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7109642542223166677, guid: d274e7146394f964ab049b70a6193aae,
+    type: 3}
+  m_PrefabInstance: {fileID: 1021957447}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1579614598
 GameObject:
   m_ObjectHideFlags: 0

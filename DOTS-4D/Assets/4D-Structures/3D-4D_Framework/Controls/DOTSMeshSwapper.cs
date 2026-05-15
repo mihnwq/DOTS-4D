@@ -29,7 +29,7 @@ public class DOTSMeshSwapper : MonoBehaviour
     {
         if(testMesh != lastMesh)
         {
-            Debug.Log("Swapping");
+         //   Debug.Log("Swapping");
             SwapMesh(testMesh);
         }
     }
